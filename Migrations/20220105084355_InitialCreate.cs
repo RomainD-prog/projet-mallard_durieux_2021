@@ -13,10 +13,10 @@ namespace MvcMovie.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Title = table.Column<string>(type: "TEXT", maxLength: 60, nullable: true),
-                    ReleaseDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Titre = table.Column<string>(type: "TEXT", maxLength: 60, nullable: true),
+                    Datedesortie = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Genre = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    Note = table.Column<string>(type: "TEXT", maxLength: 5, nullable: true),
                     Phase = table.Column<int>(type: "INTEGER", maxLength: 5, nullable: false)
                 },
                 constraints: table =>

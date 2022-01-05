@@ -23,38 +23,38 @@ namespace MvcMovie.Models
                 context.Movie.AddRange(
                     new Movie
                     {
-                        Title = "When Harry Met Sally",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
+                        Titre = "Iron Man",
+                        Datedesortie = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
                         Phase = 1,
-                        Price = 7.99M
+                        Note = "8/10"
                     },
 
                     new Movie
                     {
-                        Title = "Ghostbusters ",
-                        ReleaseDate = DateTime.Parse("1984-3-13"),
+                        Titre = "L'incroyable Hulk ",
+                        Datedesortie = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
                         Phase = 1,
-                        Price = 8.99M
+                        Note = "8/10"
                     },
 
                     new Movie
                     {
-                        Title = "Ghostbusters 2",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
+                        Titre = "Ghostbusters 2",
+                        Datedesortie = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
                         Phase = 1,
-                        Price = 9.99M
+                        Note = "9/10"
                     },
 
                     new Movie
                     {
-                        Title = "Rio Bravo",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
+                        Titre = "Rio Bravo",
+                        Datedesortie = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
                         Phase = 1,
-                        Price = 3.99M
+                        Note = "8/10"
                     }
                 );
                 context.SaveChanges();
