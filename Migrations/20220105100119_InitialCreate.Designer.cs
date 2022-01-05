@@ -9,7 +9,7 @@ using MvcMovie.Data;
 namespace MvcMovie.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20220105084355_InitialCreate")]
+    [Migration("20220105100119_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,12 +33,11 @@ namespace MvcMovie.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Note")
-                        .HasMaxLength(5)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("decimal(18, 2)");
 
-                    b.Property<int>("Phase")
-                        .HasMaxLength(5)
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Phase")
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Titre")
                         .HasMaxLength(60)

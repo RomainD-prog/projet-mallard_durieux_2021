@@ -26,7 +26,7 @@ namespace MvcMovie.Models
                         Titre = "Iron Man",
                         Datedesortie = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
-                        Phase = 1,
+                        Phase = "1",
                         Note = "8/10"
                     },
 
@@ -35,7 +35,7 @@ namespace MvcMovie.Models
                         Titre = "L'incroyable Hulk ",
                         Datedesortie = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
-                        Phase = 1,
+                        Phase = "1",
                         Note = "8/10"
                     },
 
@@ -44,7 +44,7 @@ namespace MvcMovie.Models
                         Titre = "Ghostbusters 2",
                         Datedesortie = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
-                        Phase = 1,
+                        Phase ="1" ,
                         Note = "9/10"
                     },
 
@@ -53,7 +53,7 @@ namespace MvcMovie.Models
                         Titre = "Rio Bravo",
                         Datedesortie = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
-                        Phase = 1,
+                        Phase ="1",
                         Note = "8/10"
                     }
                 );
