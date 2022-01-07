@@ -7,6 +7,10 @@
 <h1>Films qui vous restent à voir</h1>
 
 
+<p>
+    <a asp-action="Create">Ajouter un film</a>
+</p>
+
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
 
@@ -14,3 +18,53 @@
         <input type="submit" value="Filter" />
     </p>
 </form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => Model.Movies[0].Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Datedesortie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Phase)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Movies)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datedesortie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phase)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Effacer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

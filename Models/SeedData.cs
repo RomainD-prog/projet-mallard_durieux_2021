@@ -25,7 +25,7 @@ namespace MvcMovie.Models
                     {
                         Titre = "Iron Man",
                         Datedesortie = DateTime.Parse("1989-2-12"),
-                        Genre = "Romantic Comedy",
+                        Genre = "Action Aventure",
                         Phase = "1",
                         Note = "8/10"
                     },
