@@ -11,7 +11,7 @@ namespace MvcMovie.Models
         [StringLength(60, MinimumLength = 3)]
 
         public string Titre { get; set; }
-        public string Image{get;set;}
+        public string Image {get; set;}
 
         [Display(Name = "Date de sortie"), DataType(DataType.Date)]
         public DateTime Datedesortie { get; set; }
