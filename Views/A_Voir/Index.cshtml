@@ -37,12 +37,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Phase)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movies[0].Vu)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Movies)
-        {
+        {@if(item.Vu ==0){
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Titre)
@@ -60,11 +63,13 @@
                     @Html.DisplayFor(modelItem => item.Phase)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Effacer</a>
+                    @Html.DisplayFor(modelItem => item.Vu)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Ajouter à votre avancée</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                 </td>
             </tr>
-        }
+        }}
     </tbody>
 </table>
