@@ -30,14 +30,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Genre)
             </th>
-            @* <th>
-                @Html.DisplayNameFor(model => model.Movies[0].Note)
-            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Phase)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Movies[0].Vu)
             </th>
             <th></th>
         </tr>
@@ -55,14 +49,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Genre)
                 </td>
-                @* <td>
-                    @Html.DisplayFor(modelItem => item.Note)
-                </td> *@
                 <td>
                     @Html.DisplayFor(modelItem => item.Phase)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Vu)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Ajouter à votre avancée</a> |
