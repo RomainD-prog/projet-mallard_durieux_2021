@@ -20,12 +20,12 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string moviePhase, string searchString)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
-                                            orderby m.Genre
-                                            select m.Genre;
+                                            orderby m.Phase
+                                            select m.Phase;
 
             var movies = from m in _context.Movie
                          select m;
@@ -35,14 +35,15 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(s => s.Titre.Contains(searchString));
             }
 
-            if (!string.IsNullOrEmpty(movieGenre))
+            if (!string.IsNullOrEmpty(moviePhase))
             {
-                movies = movies.Where(x => x.Genre == movieGenre);
+                movies = movies.Where(x => x.Genre == moviePhase);
             }
 
             var movieGenreVM = new MovieGenreViewModel
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Phases = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Movies = await movies.ToListAsync()
             };
 
