@@ -7,9 +7,9 @@
 <h1>Films qui vous restent à voir</h1>
 
 
-<p>
+@* <p>
     <a asp-action="Create">Ajouter un film</a>
-</p>
+</p> *@
 
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
@@ -31,9 +31,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Genre)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Note)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Phase)
             </th>
@@ -56,9 +56,9 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Genre)
                 </td>
-                <td>
+                @* <td>
                     @Html.DisplayFor(modelItem => item.Note)
-                </td>
+                </td> *@
                 <td>
                     @Html.DisplayFor(modelItem => item.Phase)
                 </td>
