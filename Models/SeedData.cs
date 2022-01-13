@@ -100,6 +100,15 @@ namespace MvcMovie.Models
                         Phase ="2",
                         Resume = "Thor : Le Monde des ténèbres nous entraîne dans les nouvelles aventures de Thor, le puissant Avenger, qui lutte pour sauver la Terre et les neuf mondes d’un mystérieux ennemi qui convoite l’univers tout entier… Après les films Marvel Thor et Avengers, Thor se bat pour restaurer l’ordre dans le cosmos, mais une ancienne race, sous la conduite du terrible Malekith, un être assoiffé de vengeance, revient pour répandre les ténèbres. Confronté à un ennemi que même Odin et Asgard ne peuvent contrer, Thor doit s’engager dans son aventure la plus dangereuse et la plus personnelle, au cours de laquelle il va devoir s’allier au traître Loki pour sauver non seulement son peuple et ceux qui lui sont chers, mais aussi l’univers lui-même."
                     },
+                    new Movie
+                    {
+                        Titre = "Captain America: Le soldat de l'hiver",
+                        Image="Captain-America-The-Winter-Soldier-2014.png.webp",
+                        Datedesortie = DateTime.Parse("2014-04-14"),
+                        Genre = "Action Aventure",
+                        Phase ="2",
+                        Resume = "Après les événements cataclysmiques de New York de The Avengers, Steve Rogers aka Captain America vit tranquillement à Washington, D.C. et essaye de s'adapter au monde moderne. Mais quand un collègue du S.H.I.E.L.D. est attaqué, Steve se retrouve impliqué dans un réseau d'intrigues qui met le monde en danger. S'associant à Black Widow, Captain America lutte pour dénoncer une conspiration grandissante, tout en repoussant des tueurs professionnels envoyés pour le faire taire. Quand l'étendue du plan maléfique est révélée, Captain America et Black Widow sollicite l'aide d'un nouvel allié, le Faucon. Cependant, ils se retrouvent bientôt face à un inattendu et redoutable ennemi - le Soldat de l'Hiver."
+                    },
 
                     new Movie
                     {

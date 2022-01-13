@@ -23,7 +23,7 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Suggestion()
         {
             return View();
         }
