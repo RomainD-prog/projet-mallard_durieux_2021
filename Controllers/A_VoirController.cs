@@ -37,12 +37,11 @@ namespace MvcMovie.Controllers
 
             if (!string.IsNullOrEmpty(moviePhase))
             {
-                movies = movies.Where(x => x.Genre == moviePhase);
+                movies = movies.Where(x => x.Phase == moviePhase);
             }
 
             var movieGenreVM = new MovieGenreViewModel
             {
-                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Phases = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Movies = await movies.ToListAsync()
             };

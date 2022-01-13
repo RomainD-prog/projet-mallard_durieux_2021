@@ -1,40 +1,37 @@
-@model IEnumerable<MvcMovie.Models.Movie>
-
+@model MvcMovie.Models.MovieGenreViewModel
+    
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Suggestions";
 }
+<h1>@ViewData["Title"]</h1>
 
-<h1>Votre Avancée</h1>
+<p>Retrouvez ici les films que vou seriez susceptibles d'aimer.</p>
+
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Titre)
+                @Html.DisplayNameFor(model => Model.Movies[0].Titre)
             </th>
             <th>
+                @Html.DisplayNameFor(model => Model.Movies[0].Datedesortie)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Datedesortie)
+                @Html.DisplayNameFor(model => Model.Movies[0].Genre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @Html.DisplayNameFor(model => Model.Movies[0].Phase)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Note)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phase)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Vu)
+                @Html.DisplayNameFor(model => Model.Movies[0].Vu)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-    @if (item.Vu >= 1){
+@foreach (var item in Model.Movies) {
+    @if (item.Note >= 8 && item.Vu == 0){
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Titre)
@@ -58,9 +55,7 @@
                 @Html.DisplayFor(modelItem => item.Vu)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Effacer</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
             </td>
         </tr>
 }}

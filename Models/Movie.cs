@@ -22,9 +22,9 @@ namespace MvcMovie.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$"), Required, StringLength(30)]
         public string Genre { get; set; }
 
-        [Range(1, 100), DataType(DataType.Currency)]
+        [Range(1, 10)]
         [Column(TypeName = "decimal(18, 2)")]
-        public string Note { get; set; }
+        public int Note { get; set; }
 
         [StringLength(60, MinimumLength = 1)]
         public string Phase { get; set; }
