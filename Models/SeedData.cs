@@ -233,13 +233,55 @@ namespace MvcMovie.Models
 
                     new Movie
                     {
-                        Titre = "Spier-Man : Far From Home",
+                        Titre = "Spider-Man : Far From Home",
                         Image="spiderman2.jpg",
                         Datedesortie = DateTime.Parse("2019-7-3"),
                         Genre = "Action Aventure",
                         Phase ="3",
                         Resume = "L'araignée sympa du quartier décide de rejoindre ses meilleurs amis Ned, MJ, et le reste de la bande pour des vacances en Europe. Cependant, le projet de Peter de laisser son costume de super-héros derrière lui pendant quelques semaines est rapidement compromis quand il accepte à contrecoeur d'aider Nick Fury à découvrir le mystère de plusieurs attaques de créatures, qui ravagent le continent !"
+                    },
+
+                    new Movie
+                    {
+                        Titre = "Black Widow",
+                        Image="blackwidow.webp",
+                        Datedesortie = DateTime.Parse("2021-7-7"),
+                        Genre = "Action Aventure",
+                        Phase ="4",
+                        Resume = "Natasha Romanoff, alias Black Widow, voit resurgir la part la plus sombre de son passé pour faire face à une redoutable conspiration liée à sa vie d’autrefois. Poursuivie par une force qui ne reculera devant rien pour l’abattre, Natasha doit renouer avec ses activités d’espionne et avec des liens qui furent brisés, bien avant qu’elle ne rejoigne les Avengers."
+                    },
+
+                    new Movie
+                    {
+                        Titre = "Shang-Chi et la légende des Dix Anneaux",
+                        Image="shang-chi.png.webp",
+                        Datedesortie = DateTime.Parse("2021-9-1"),
+                        Genre = "Action Aventure",
+                        Phase ="4",
+                        Resume = "Shang-Chi va devoir affronter un passé qu’il pensait avoir laissé derrière lui lorsqu’il est pris dans la toile de la mystérieuse organisation des dix anneaux."
+                    },
+
+                    new Movie
+                    {
+                        Titre = "Les Eternels",
+                        Image="eternel.jpg.png",
+                        Datedesortie = DateTime.Parse("2021-11-3"),
+                        Genre = "Action Aventure",
+                        Phase ="4",
+                        Resume = "Depuis l’aube de l’humanité, les Éternels, un groupe de héros venus des confins de l’univers, protègent la Terre. Lorsque les Déviants, des créatures monstrueuses que l’on croyait disparues depuis longtemps, réapparaissent mystérieusement, les Éternels sont à nouveau obligés de se réunir pour défendre l’humanité…"
+                    },
+
+                    new Movie
+                    {
+                        Titre = "Spider-Man : No Way Home",
+                        Image="spiderman3.webp",
+                        Datedesortie = DateTime.Parse("2021-12-15"),
+                        Genre = "Action Aventure",
+                        Phase ="4",
+                        Resume = "Pour la première fois dans son histoire cinématographique, Spider-Man, le héros sympa du quartier est démasqué et ne peut désormais plus séparer sa vie normale de ses lourdes responsabilités de super-héros. Quand il demande de l'aide à Doctor Strange, les enjeux deviennent encore plus dangereux, le forçant à découvrir ce qu'être Spider-Man signifie véritablement."
                     }
+
+                
                 );
                 context.SaveChanges();
             }
